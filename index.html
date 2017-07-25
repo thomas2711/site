@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	
+	<meta name="description" content="">
+	<meta name="author" content="Thomas Edward Ragucci">
+
+	<link rel="shortcut icon" href="favicon.ico">
+	<!--<link rel="apple-touch-icon" href="icon.png" /> -->
+	<title>Thomas Edward Ragucci</title>
+
+	<link href="css/bootstrap.css" rel="stylesheet">
+
+	<link href="css/main.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Open+Sans:300,400,700" rel="stylesheet">
+
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"></a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li> <a href='https://www.instagram.com/thomas.2711/' target="_blank">Photography <i class="fa fa-instagram"></i></a></li>
+					<!--<li><p class="navbar-text">Site is a work in progress, please excuse any rough edges!</p></li> -->
+            		<!--<li><a href="#about">About</a></li>
+            		<li><a href="#contact">Contact</a></li> -->
+            	</ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+
+
+    <div class="header" id="headerwrap">
+    	<div class="container">
+    		<div class="row centered">
+    			<div class="col-lg-12 animated fadeInUp">
+    				<h1>Thomas Edward Ragucci</h1>
+    				<h3>Information Technology and Security Intern <br>
+    					<div style="margin: 5px">Kroll, Inc</div>
+    				</h3>
+    				<!-- social links top -->
+    				<div class="social_top"><p><a href="https://www.linkedin.com/in/thomasedw/" target="_blank"><i class="fa fa-linkedin fa-3x"></i></a>
+    					<a href="#"><i class="fa fa-github fa-3x"></i></a>
+    					<!--<a href="#"><i class="fa fa-facebook"></i></a>-->
+    					<!--<a href='https://www.instagram.com/thomas.2711/' target="_blank"><i class="fa fa-instagram fa-3x"></i></a>-->
+    				</p></div>
+
+
+    			</div>
+    		</div>
+    	</div>
+    </div>	
+
+    <section id="about" name="about"></section>
+    <div class = "about">
+    	<div class = "container">
+    		<div class="row">
+    			<div class="col-lg-2 col-lg-offset-1">
+    				<h5>About</h5>
+    			</div>
+    			<div class="col-lg-6">
+    				<p>Hi! I'm currently a rising junior at Williams College, double majoring in Computer Science and Economics.</p>
+    			</div>
+    			<div class="col-lg-3">
+    				<p><a href="assets/ter-resume.pdf" target="_blank">download pdf</a></p>
+    			</div>
+
+    		</div>
+    	</div>
+    </div>
+
+    <!-- Resume -->
+    <section id="resume" name="resume"></section>
+
+
+    <!-- EDU -->
+    <div class="container desc">
+    	<div class="row">
+    		<div class="col-lg-2 col-lg-offset-1">
+    			<h5>Education</h5>
+    		</div>
+
+    		<div class="col-lg-6">
+    			<p><t>Bachelor of Arts in <b>Computer Science</b> &amp; <b>Economics</b> </t><br/>
+    				Williams College
+    				<br/><i></i>
+    				<center><button id="showhide" style="padding: 5px 12px" onclick="toggle_courses()">Show Courses</button></center>
+    			</p>
+    		</div>
+
+    		<div class="col-lg-3">
+    			<p><sm>EXPECTED SPRING 2019</sm><br/>
+    				<!-- <imp><sm>IN PROGRESS</sm></imp>*/ -->
+    			</p>
+    		</div>
+
+    	</div><!--/.row -->
+
+    	<div class="row">
+    		<div id="courses" style="display:none">
+
+    			<div class="col-lg-5 col-lg-offset-2">
+    				<ul style="list-style-type:none" class="c_list">
+    					<li><t>Fall 2017 (in progress)</t></li>
+    					<li>ECON 255, <i>Econometrics</i></li>
+    					<li>CSCI 339, <i>Distributed Systems</i></li>
+    					<li>CSCI 331, <i>Introduction to Computer Security</i></li>
+    					<li>PSYC 101, <i>Introductory Psychology</i></li>
+    				</ul>
+    			</div>
+
+    			<div class="col-lg-5">
+    				<ul style="list-style-type:none" class="c_list">
+    					<li><t>Spring 2018 (IES Abroad, Vienna)</t></li>
+    					<li><i>TBD</i></li>
+    				</ul>
+    			</div>
+
+    			<br>
+
+    			<div class="col-lg-5 col-lg-offset-2">
+    				<ul style="list-style-type:none" class="c_list">
+    					<li><t>Fall 2016</t></li>
+    					<li>ECON 251, <i>Price and Allocation Theory</i></li>
+    					<li>CSCI 237, <i>Computer Organization</i></li>
+    					<li>MATH 151, <i>Multivariable Calculus</i></li>
+    					<li>COMP 325, <i>American Social Dramas</i></li>
+    					<li></li>
+    				</ul>
+    			</div>
+
+    			<div class="col-lg-5">
+    				<ul style="list-style-type:none" class="c_list">
+    					<li><t>Spring 2017</t></li>
+    					<li>ECON 252, <i>Macroeconomics</i></li>
+    					<li>CSCI 432, <i>Operating Systems</i></li>
+    					<li>CSCI 256, <i>Algorithm Design &amp; Analysis</i></li>
+    					<li>STAT 201, <i>Statistics &amp; Data Analysis</i></li>
+    					<li>CLAS 228, <i>Comic Abuse in Ancient Greece &amp; Rome</i></li>
+    				</ul>
+    			</div>
+
+    			<br>
+
+    			<div class="col-lg-5 col-lg-offset-2">
+    				<ul style="list-style-type:none" class="c_list">
+    					<li><t>Fall 2015</t></li>
+    					<li>ECON 110, <i>Principles of Microeconomics</i></li>
+    					<li>CSCI 136, <i>Data Structures &amp; Advanced Programming</i></li>
+    					<li>GERM 101, <i>Elementary German</i></li>
+    					<li>PSCI 120, <i>America &amp; the World</i></li>
+    				</ul>
+    			</div>
+
+    			<div class="col-lg-5">
+    				<ul style="list-style-type:none" class="c_list">
+    					<li><t>Spring 2016</t></li>
+    					<li>ECON 120, <i>Principles of Macroeconomics</i></li>
+    					<li>CSCI 334, <i>Principles of Programming Languages</i></li>
+    					<li>MATH 200, <i>Discrete Math</i></li>
+    					<li>SOC 101, <i>Invitation to Sociology</i></li>
+    				</ul>
+    			</div>
+
+    		</div>
+    	</div>
+
+    	<!--\<br>-->
+    	<hr>
+
+    </div>
+
+    <!-- Work -->
+    <div class="container desc">
+    	<div class="row">
+
+    		<div class="col-lg-2 col-lg-offset-1">
+    			<h5>Work</h5>
+    		</div>
+
+    		<!-- 1 -->
+    		<div class="col-lg-6">
+    			<p class="tight"><t>Information Technology &amp; Security Intern</t><br/>
+    				Kroll, Inc <br/>
+    			</p>
+    			<p><more>I contributed to technical documentation for an infrastructure migration to AWS and Office 365 by taking part in policy, procedure, and standards development. As part of this undertaking, I performed research and evaluated various potential products and solutions in order to assist in the selection and acquisition of new equipment, infrastructure, and software. Additionally, as part of an effort to maintain the integrity of Kroll’s information technology infrastructure, I leveraged software such as Carbon Black’s Cb Response and Cb Defense to identify, analyze, and respond to security threats.</more></p>
+    		</div>
+    		<div class="col-lg-3">
+    			<p><sm>SUMMER 2017<br />
+    				Washington, D.C.</sm></p>
+			</div>
+
+			<!-- 2 -->
+			<div class="col-lg-6 col-lg-offset-3">
+				<p class="tight"><t>Computer Science Teaching Assistant</t><br/>
+					Williams College<br/>
+				</p>
+				<p><more>I am responsible for running TA sessions to assist students with their labs and coursework. During the spring semester of 2017, I was a TA for CSCI 136, Data Structures and Advanced Programming, which is the second introductory course in the Williams computer science curriculum. For the upcoming fall 2017 semester, I will be TA'ing for CSCI 237, Computer Organization, which is one of four core courses in the curriculum. </more></p>
+			</div>
+
+			<div class="col-lg-3">
+				<p><sm>JANUARY 2017 - PRESENT<br/>
+					Williamstown, MA</sm></p>
+			</div>
+
+			<!-- 3 -->
+			<div class="col-lg-6 col-lg-offset-3">
+				<p class="tight"><t>Network Technician, Office of Information Technology</t><br/>
+					Williams College<br/>
+				</p>
+				<p><more>I installed and maintained various elements of the campus-wide networking infrastructure, as well as worked with faculty and students to troubleshoot and resolve issues. Much of this work involved configuring and using hardware from vendors such as Cisco, Fluke, and Ubiquity, and accompanying software like Cisco Prime Infrastructure.</more>
+				</p>
+			</div>
+			<div class="col-lg-3">
+				<p><sm>MARCH 2016 - DECEMBER 2016<br />
+				Williamstown, MA</sm></p>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+
+	<div class="container desc">
+		<div class="row">
+
+			<div class="col-lg-2 col-lg-offset-1">
+				<h5>Skills</h5>
+			</div>
+
+			<!-- 1 -->
+			<div class="col-lg-6">
+				<p class="tight"><t>Java, C++, Python, R, macOS, Linux, Photography, Adobe Creative Suite, Videography, Final Cut Pro</t></p>
+			</div>
+		</div>
+	</div>
+
+	<br>
+	<br>
+
+	<!--<script src="js/jquery.js"></script>-->
+	<script src="js/scripts.js"></script>
+	<script src="js/form.js"></script>
+	<script src="js/collapse.js"></script>
+
+	<!-- Begin Google Analytics -->
+
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-102670272-2', 'auto');
+		ga('send', 'pageview');
+
+	</script>
+
+	<!-- End Google Analytics -->
+
+	<section id="contact" name="contact"></section>
+	<!-- footer -->
+	<div id="footwrap" class="footer">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-lg-1">
+					<h5>CONTACT</h5>
+				</div>
+
+
+				<!-- contact -->
+				<div class="col-lg-11">
+					<button type="button" id="showhidec" onclick="toggle_contact()">Show contact form</button>
+
+					<div id="contact_form" style="display:none">
+						<form name="contact" action="" method=“”>
+							<fieldset>
+								<input type="text" name="name" id="name" placeholder="Name" size="30" value="" class="text-input" />
+								<label class="error" for="name" id="name_error"><h5>This field is required.</h5></label>
+
+								<br>
+
+								<input type="text" name="email" placeholder="Return email" id="email" size="30" value="" class="text-input" />
+								<label class="error" for="email" id="email_error"><h5>This field is required.</h5></label>
+
+								<br/>
+
+								<textarea name="message" id="message" class="" rows="5" cols="45" placeholder="Enter messsage here..."></textarea>
+
+								<br>
+
+								<div class="g-recaptcha"
+									data-sitekey="6LfqWykUAAAAAH_L0Bpgok5_OgysHXZjDFZytcP8"
+									data-callback="submit_contact"
+									data-size="invisible">
+								</div>
+
+								<input type="button" name="submit" class="button" id="submit_button" onclick="verify_form()" value="Send"/>
+
+								<script>$('.error').hide();</script>
+
+								<!--<button class="g-recaptcha"
+								data-sitekey="6LfqWykUAAAAAH_L0Bpgok5_OgysHXZjDFZytcP8"
+								data-callback="submit_contact" id="submit_button">
+								Submit</button> -->
+
+
+								<!--<input type="submit" name="submit" class="button col-lg-offset-2" id="submit_button" value="Send" />-->
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
