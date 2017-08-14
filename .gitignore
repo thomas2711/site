@@ -1,7 +1,10 @@
 
+.vscode/
 **/.DS_Store
 contact.txt
 secret.txt
 secret_key.txt
 .vscode/
 db.sqlite3
+*.pyc
+*~
