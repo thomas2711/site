@@ -8,3 +8,5 @@ secret_key.txt
 db.sqlite3
 *.pyc
 *~
+
+movies/
