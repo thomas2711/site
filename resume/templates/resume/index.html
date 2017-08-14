@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -7,13 +8,13 @@
 	<meta name="description" content="">
 	<meta name="author" content="Thomas Edward Ragucci">
 
-	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="shortcut icon" href="{% static 'resume/favicon.ico' %}">
 	<!--<link rel="apple-touch-icon" href="icon.png" /> -->
 	<title>Thomas Edward Ragucci</title>
 
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
-	<link href="css/main.css" rel="stylesheet">
+	<link href="{% static 'resume/css/main.css' %}" rel="stylesheet">
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -42,6 +43,12 @@
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">Home</a></li>
 					<li> <a href='https://www.instagram.com/thomas.2711/' target="_blank">Photography <i class="fa fa-instagram"></i></a></li>
+					<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Project(s)<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li class="active"><a href="#">Online Movie Watchlist</a></li>
+							</ul>
+						</li>
 					<!--<li><p class="navbar-text">Site is a work in progress, please excuse any rough edges!</p></li> -->
             		<!--<li><a href="#about">About</a></li>
             		<li><a href="#contact">Contact</a></li> -->
@@ -83,7 +90,7 @@
     				<p>Hi! I'm currently a rising junior at Williams College, double majoring in Computer Science and Economics.</p>
     			</div>
     			<div class="col-lg-3">
-    				<p><a href="assets/ter-resume.pdf" target="_blank">download pdf</a></p>
+    				<p><a href="{% static 'resume/assets/ter-resume.pdf' %}" target="_blank">download pdf</a></p>
     			</div>
 
     		</div>
@@ -260,8 +267,8 @@
 	<br>
 
 	<!--<script src="js/jquery.js"></script>-->
-	<script src="js/scripts.js"></script>
-	<script src="js/form.js"></script>
+	<script src="{% static 'resume/js/scripts.js' %}"></script>
+	<script src="{% static 'resume/js/form.js' %}"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<!-- Begin Google Analytics -->
@@ -296,6 +303,7 @@
 
 					<div id="contact_form" style="display:none">
 						<form name="contact" action="" method=“”>
+							{% csrf_token %}
 							<fieldset>
 								<input type="text" name="name" id="name" placeholder="Name" size="30" value="" class="text-input" />
 								<label class="error" for="name" id="name_error"><h5>This field is required.</h5></label>
@@ -319,7 +327,10 @@
 
 								<input type="button" name="submit" class="button" id="submit_button" onclick="verify_form()" value="Send"/>
 
-								<script>$('.error').hide();</script>
+								<script>
+								$('.error').hide(); 
+								var csrf = '{{ csrf_token }}';
+								</script>
 
 								<!--<button class="g-recaptcha"
 								data-sitekey="6LfqWykUAAAAAH_L0Bpgok5_OgysHXZjDFZytcP8"
