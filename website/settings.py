@@ -24,9 +24,9 @@ with open('website/secret_key.txt') as f:
     SECRET_KEY = f.read().strip()
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = [] 
+ALLOWED_HOSTS = ['thomasedw.com', 'www.thomasedw.com'] 
 
 
 # Application definition
@@ -76,10 +76,17 @@ WSGI_APPLICATION = 'website.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
+with open('website/psql_pwd.txt') as f:
+    psql_pwd = f.read().strip()
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'website',
+        'USER': 'websiteuser',
+        'PASSWORD': psql_pwd,
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
@@ -121,3 +128,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
+from sys import platform
+if platform == 'darwin':
+    from website.settings_dev import *
