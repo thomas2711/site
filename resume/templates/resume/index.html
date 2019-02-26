@@ -45,13 +45,14 @@
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">Home</a></li>
 					<li> <a href='https://www.instagram.com/thomas.2711/' target="_blank">Photography <i class="fa fa-instagram"></i></a></li>
+					<!-- 
 					<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Project(s)<span class="caret"></span></a>
 							<ul class="dropdown-menu">
-								<!-- <li><a href="{% url 'movies:index' %}"><i class="fa fa-film" aria-hidden="true"></i> Online Movie Watchlist</a></li> -->
+								<li><a href="{% url 'movies:index' %}"><i class="fa fa-film" aria-hidden="true"></i> Online Movie Watchlist</a></li>
 								<li><a href="https://github.com/thomas2711/" target="_blank"><i class="fa fa-github"></i> Github</a></li>
 							</ul>
-						</li>
+						</li> -->
 					<!--<li><p class="navbar-text">Site is a work in progress, please excuse any rough edges!</p></li> -->
             		<!--<li><a href="#about">About</a></li>
             		<li><a href="#contact">Contact</a></li> -->
@@ -92,9 +93,9 @@
     			<div class="col-lg-6">
     				<p>Hi! I'm currently a senior at Williams College, double majoring in Computer Science and Economics.</p>
     			</div>
-    			<div class="col-lg-3">
+    			<!--<div class="col-lg-3">
     				<p><a href="{% static 'resume/assets/ter-resume-web.pdf' %}" target="_blank">download pdf</a></p>
-    			</div>
+    			</div> -->
 
     		</div>
     	</div>
@@ -102,7 +103,6 @@
 
     <!-- Resume -->
     <section id="resume" name="resume"></section>
-
 
     <!-- EDU -->
     <div class="container desc">
@@ -132,19 +132,22 @@
 
 				<div class="col-lg-5 col-lg-offset-2">
 						<ul style="list-style-type:none" class="c_list">
-							<li><t>Fall 2018 (in progress)</t></li>
+							<li><t>Fall 2018</t></li>
 							<li>CSCI 361, <i>Theory of Computation</i></li>
 							<li>MATH 250, <i>Linear Algebra</i></li>
 							<li>STAT 346, <i>Regression and Forecasting</i></li>
 							<li>ECON 378, <i>Long-Run Perspectives on Economic Growth</i></li>
-							<li>SOC 363, <i>Cold War Technocultures</i></li>
 						</ul>
 					</div>
 	
 					<div class="col-lg-5">
 						<ul style="list-style-type:none" class="c_list">
 							<li><t>Spring 2019</t></li>
-							<li><i>TBD</i></li>
+							<li>STAT 442, <i>Statistical Learning and Data Mining</i></li>
+							<li>ECON 456, <i>Income Distribution</i></li>
+							<li>ECON 362, <i>Global Competitive Strategies</i></li>
+							<li>PSYC 242, <i>Social Psychology</i></li>
+							<li>MUS 211, <i>Music, Nationalism, and Popular Culture</i></li>
 						</ul>
 					</div>
 	
@@ -238,7 +241,7 @@
 					<p class="tight"><t>Software Engineering Intern, Supply Chain Engineering</t><br/>
 						Wayfair, Inc.<br/>
 					</p>
-					<p><more></more></p>
+					<p><more>I designed and implemented, as part of a four person team, an extranet for truckload carriers. The extranet’s main component allows carriers to submit and view accessorials (additional charges for performing services outside of pickup/delivery — e.g. waiting time) through a dynamic webpage that pre-populates and validates information based upon truck, carrier, and user information. I also led the development effort for another component of this project, which involved augmenting an existing intranet tool to allow employees to view, cross-check, and approve carrier-submitted accessorials, which decreased the number of human interventions necessary for an accessorial to be processed. </more></p>
 				</div>
 
 				<div class="col-lg-3">
@@ -251,11 +254,11 @@
 				<p class="tight"><t>Computer Science Teaching Assistant</t><br/>
 					Williams College<br/>
 				</p>
-				<p><more>I am responsible for running TA sessions to assist students with their labs and coursework. During the spring semester of 2017, I was a TA for <a href="https://csci.williams.edu/csci-136-data-structures-and-advanced-programming-q/" target="_blank">CSCI 136, Data Structures and Advanced Programming</a>, which is the second introductory course in the Williams computer science curriculum. For the current fall 2017 semester, I am  TA'ing for <a href="https://csci.williams.edu/csci-237-computer-organization-q/" target="_blank">CSCI 237, Computer Organization</a>, which is one of four core courses in the Williams College CS curriculum. </more></p>
+				<p><more>I was responsible for running TA sessions to assist students with their labs and coursework. During the spring semester of 2017, I was a TA for <a href="https://csci.williams.edu/csci-136-data-structures-and-advanced-programming-q/" target="_blank">CSCI 136, Data Structures and Advanced Programming</a>, which is the second introductory course in the Williams computer science curriculum. For the fall 2017 and fall 2018 semesters, I was a TA for <a href="https://csci.williams.edu/csci-237-computer-organization-q/" target="_blank">CSCI 237, Computer Organization</a>, which is one of four core courses in the Williams College CS curriculum. </more></p>
 			</div>
 
 			<div class="col-lg-3">
-				<p><sm>JANUARY 2017 - PRESENT<br/>
+				<p><sm>JANUARY 2017 - DECEMBER 2018<br/>
 					Williamstown, MA</sm></p>
 			</div>
 
@@ -325,66 +328,5 @@
 	</script>
 
 	<!-- End Google Analytics -->
-
-	<section id="contact" name="contact"></section>
-	<!-- footer -->
-	<div id="footwrap" class="footer">
-		<div class="container">
-			<div class="row">
-
-				<div class="col-lg-1">
-					<h5>CONTACT</h5>
-				</div>
-
-
-				<!-- contact -->
-				<div class="col-lg-11">
-					<button type="button" id="showhidec" onclick="toggle_contact()">Show contact form</button>
-
-					<div id="contact_form" style="display:none">
-						<form name="contact" action="" method=“”>
-							{% csrf_token %}
-							<fieldset>
-								<input type="text" name="name" id="name" placeholder="Name" size="30" value="" class="text-input" />
-								<label class="error" for="name" id="name_error"><h5>This field is required.</h5></label>
-
-								<br>
-
-								<input type="text" name="email" placeholder="Return email" id="email" size="30" value="" class="text-input" />
-								<label class="error" for="email" id="email_error"><h5>This field is required.</h5></label>
-
-								<br/>
-
-								<textarea name="message" id="message" class="" rows="5" cols="45" placeholder="Enter messsage here..."></textarea>
-
-								<br>
-
-								<div class="g-recaptcha"
-									data-sitekey="6LeN2CwUAAAAALa-_yrNA_4UPnmhJVhodZf5RK3J"
-									data-callback="submit_contact"
-									data-size="invisible">
-								</div>
-
-								<input type="button" name="submit" class="button" id="submit_button" onclick="verify_form()" value="Send"/>
-
-								<script>
-								$('.error').hide(); 
-								var csrf = '{{ csrf_token }}';
-								</script>
-
-								<!--<button class="g-recaptcha"
-								data-sitekey="6LeN2CwUAAAAALa-_yrNA_4UPnmhJVhodZf5RK3J"
-								data-callback="submit_contact" id="submit_button">
-								Submit</button> -->
-
-
-								<!--<input type="submit" name="submit" class="button col-lg-offset-2" id="submit_button" value="Send" />-->
-							</fieldset>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 </body>
 </html>
